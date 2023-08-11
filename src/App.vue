@@ -1,19 +1,26 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + Vite" />
+  <div class="container">
+    <div class="row">
+      <ContactsTable>
+        <template v-slot:header>
+          <h1 class="text-center mb-4">IronContacts</h1>
+        </template>
+      </ContactsTable>
+    </div>
+  </div>
 </template>
 
 <script setup>
-import HelloWorld from './components/HelloWorld.vue';
+import ContactsTable from "./components/ContactsTable.vue";
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.container {
+  padding: 2rem 0rem;
+  font-size: 1.2em;
+}
+
+h1 {
+  margin: 2rem 0rem 1rem;
 }
 </style>
